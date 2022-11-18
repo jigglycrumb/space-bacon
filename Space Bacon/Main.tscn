@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://Bacon.tscn" type="PackedScene" id=4]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://StartScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Vacuum.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Node"]
 script = ExtResource( 2 )
 star_scene = ExtResource( 3 )
 bacon_scene = ExtResource( 4 )
+vacuum_scene = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -34,8 +36,11 @@ visible = false
 
 [node name="StartScreen" parent="." instance=ExtResource( 6 )]
 
+[node name="VacuumTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="StarTimer" to="." method="_on_StarTimer_timeout"]
 [connection signal="timeout" from="BaconTimer" to="." method="_on_BaconTimer_timeout"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_GameTimer_timeout"]
 [connection signal="eat" from="Player" to="." method="_on_Player_eat"]
 [connection signal="new_game" from="StartScreen" to="." method="_on_StartScreen_new_game"]
+[connection signal="timeout" from="VacuumTimer" to="." method="_on_VacuumTimer_timeout"]

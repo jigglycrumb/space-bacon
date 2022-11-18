@@ -8,5 +8,6 @@ func _process(delta):
 	if self.position.x < -50:
 		queue_free()	
 
-func _on_Bacon_area_entered(area):
-	queue_free()
+func _on_Bacon_area_entered(player):
+	if not player.frozen:
+		queue_free()
