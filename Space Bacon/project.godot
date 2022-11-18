@@ -27,6 +27,7 @@ window/stretch/aspect="keep"
 layer=false
 window=false
 dpi=false
+group=false
 
 [gui]
 
@@ -59,6 +60,7 @@ move_left={
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="bacon"
+2d_physics/layer_3="vacuum"
 
 [physics]
 
