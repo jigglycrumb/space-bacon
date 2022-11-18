@@ -4,6 +4,7 @@ export var GAME_TIME = 60
 
 export (PackedScene) var star_scene
 export (PackedScene) var bacon_scene
+export (PackedScene) var vacuum_scene
 
 var screen_size
 var score
@@ -46,6 +47,8 @@ func _on_StartScreen_new_game():
 	$StartScreen.visible = false
 	$BaconTimer.start()
 	$GameTimer.start()
+	set_vacuum_timer()
+	$VacuumTimer.start()
 	
 func _on_GameTimer_timeout():
 	time_left -= 1	
@@ -64,9 +67,23 @@ func spawn_star(x, y):
 	
 func end_game():
 	$BaconTimer.stop()
-	get_tree().call_group("bacon", "queue_free")
+	$VacuumTimer.stop()
 	$StartScreen.update_final_score(score)
 	$StartScreen/FinalScoreLabel.visible = true
 	$StartScreen.visible = true
 	$HUD.visible = false
 	$Player.visible = false
+	
+	get_tree().call_group("bacon", "queue_free")
+	get_tree().call_group("vacuum", "queue_free")
+
+func _on_VacuumTimer_timeout():
+	var vacuum = vacuum_scene.instance()
+	vacuum.position.x = screen_size.x + 50
+	vacuum.position.y =  randi() % int(screen_size.y)
+	add_child(vacuum)
+	set_vacuum_timer()
+	
+
+func set_vacuum_timer():
+	$VacuumTimer.wait_time = (randi() % 3) + 2
