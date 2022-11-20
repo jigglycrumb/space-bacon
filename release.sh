@@ -14,6 +14,6 @@ cd /Applications/Godot.app/Contents/MacOS/
 # commit & push
 cd "$PROJECT_PATH"
 cd ..
-git add all
+git add --all
 git commit -m 'website update'
 git push
