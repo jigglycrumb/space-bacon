@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://StartScreen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Vacuum.tscn" type="PackedScene" id=7]
+[ext_resource path="res://audio/Spazzmatica-Polka.mp3" type="AudioStream" id=8]
 
 [node name="Main" type="Node"]
 script = ExtResource( 2 )
@@ -37,6 +38,11 @@ visible = false
 [node name="StartScreen" parent="." instance=ExtResource( 6 )]
 
 [node name="VacuumTimer" type="Timer" parent="."]
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -5.0
+autoplay = true
 
 [connection signal="timeout" from="StarTimer" to="." method="_on_StarTimer_timeout"]
 [connection signal="timeout" from="BaconTimer" to="." method="_on_BaconTimer_timeout"]
