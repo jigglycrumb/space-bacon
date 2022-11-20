@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Spazzmatica-Polka.mp3-c1b543f4cc3beca95f25146bc06c0b47.mp3str"
+
+[deps]
+
+source_file="res://audio/Spazzmatica-Polka.mp3"
+dest_files=[ "res://.import/Spazzmatica-Polka.mp3-c1b543f4cc3beca95f25146bc06c0b47.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

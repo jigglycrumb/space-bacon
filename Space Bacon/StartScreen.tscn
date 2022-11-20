@@ -29,8 +29,6 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 4
-playing = true
 centered = false
 
 [node name="NewGameButton" type="TextureButton" parent="."]
