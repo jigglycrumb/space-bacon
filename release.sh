@@ -1,15 +1,19 @@
 #!/bin/sh
 
-PROJECT_PATH="/Users/hpcodecraft/Projects/Github/space-bacon/Space Bacon/project.godot"
+PROJECT_PATH="/Users/hpcodecraft/Projects/Github/space-bacon/Space Bacon"
 
 # update project
+cd $PROJECT_PATH
 git checkout website
-git merge main
+git merge main --commit --no-edit
 
 # build
-/Applications/Godot.app/Contents/MacOS/Godot $PROJECT_PATH --export HTML5
+cd /Applications/Godot.app/Contents/MacOS/
+./Godot "$PROJECT_PATH/project.godot" --export HTML5
 
 # commit & push
+cd $PROJECT_PATH
+cd ..
 git add all
 git commit -m 'website update'
 git push
