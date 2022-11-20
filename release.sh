@@ -12,7 +12,7 @@ cd /Applications/Godot.app/Contents/MacOS/
 ./Godot "$PROJECT_PATH/project.godot" --export HTML5
 
 # commit & push
-cd $PROJECT_PATH
+cd "$PROJECT_PATH"
 cd ..
 git add all
 git commit -m 'website update'
