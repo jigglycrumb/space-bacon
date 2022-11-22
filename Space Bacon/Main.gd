@@ -17,6 +17,7 @@ func _ready():
 	score = 0
 	for _i in range(50):
 		spawn_star(randi() % int(screen_size.x), randi() % int(screen_size.y))
+		$BackgroundMusicPlayer.play()
 	
 func _process(_delta):
 	if(time_left) <= 0:
