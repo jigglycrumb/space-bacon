@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROJECT_PATH="~/Projects/Github/space-bacon/Space Bacon"
+PROJECT_PATH="$HOME/Projects/Github/space-bacon/Space Bacon"
 
 # update project
 cd $PROJECT_PATH
