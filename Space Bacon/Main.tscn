@@ -18,7 +18,7 @@ vacuum_scene = ExtResource( 7 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.00392157, 0.266667, 0.47451, 1 )
+color = Color( 0, 0.2, 0.4, 1 )
 
 [node name="StarTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -41,7 +41,7 @@ visible = false
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -5.0
+volume_db = -13.0
 autoplay = true
 
 [connection signal="timeout" from="StarTimer" to="." method="_on_StarTimer_timeout"]
