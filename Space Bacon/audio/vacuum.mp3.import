@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/vacuum.mp3-15367943ea5f92d01dfc0ea6ae688824.mp3str"
+
+[deps]
+
+source_file="res://audio/vacuum.mp3"
+dest_files=[ "res://.import/vacuum.mp3-15367943ea5f92d01dfc0ea6ae688824.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

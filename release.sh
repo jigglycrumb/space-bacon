@@ -17,3 +17,4 @@ cd ..
 git add --all
 git commit -m 'website update'
 git push
+git checkout main

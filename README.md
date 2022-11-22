@@ -6,6 +6,10 @@ I'm making it to learn the Godot Game Engine.
 
 ### Credits
 
+- SFX:
+
+  - Vacuum sound by https://www.fesliyanstudios.com
+
 - Background music:
 
   Spazzmatica Polka by Kevin MacLeod | https://incompetech.com/  
