@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://images/spr_brain_0.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://images/questionmarks_2.png" type="Texture" id=3]
 [ext_resource path="res://images/questionmarks_1.png" type="Texture" id=4]
+[ext_resource path="res://images/rainbow.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 94.0479
@@ -43,7 +44,6 @@ visible = false
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
 animation = "confused"
-frame = 1
 playing = true
 offset = Vector2( 175, -175 )
 
@@ -54,6 +54,7 @@ amount = 300
 lifetime = 4.0
 speed_scale = 7.0
 local_coords = false
+texture = ExtResource( 5 )
 gravity = Vector2( -60, 0 )
 color_ramp = SubResource( 3 )
 
