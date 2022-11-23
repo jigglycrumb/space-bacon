@@ -44,7 +44,6 @@ visible = false
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
 animation = "confused"
-frame = 1
 playing = true
 offset = Vector2( 175, -175 )
 
