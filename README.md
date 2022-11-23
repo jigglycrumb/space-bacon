@@ -6,7 +6,7 @@ I'm making it to learn the Godot Game Engine.
 
 ### Credits
 
-- SFX:
+- Sound effects:
 
   - Vacuum sound by https://www.fesliyanstudios.com
 
