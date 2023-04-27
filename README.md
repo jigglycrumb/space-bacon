@@ -1,6 +1,6 @@
 # Space Bacon
 
-All tiny game featuring my cat.
+A tiny game featuring my cat.
 
 I'm making it to learn the Godot Game Engine.
 
